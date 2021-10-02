@@ -4,16 +4,16 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 1912110592596003048
-    second: old dude
+    second: panicmetro_0
   - first:
       213: 6507816737931365930
-    second: player
+    second: panicmetro_1
   - first:
       213: 8186926435456020225
-    second: stairs
+    second: panicmetro_2
   - first:
       213: -4137079212974785151
-    second: asphalt
+    second: panicmetro_3
   - first:
       213: -7105854197736147081
     second: player_small
@@ -121,15 +121,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: old dude
+      name: panicmetro_0
       rect:
         serializedVersion: 2
-        x: 54
+        x: 80
         y: 176
-        width: 7
-        height: 15
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -142,15 +142,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player
+      name: panicmetro_1
       rect:
         serializedVersion: 2
-        x: 68
+        x: 32
         y: 176
-        width: 9
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -163,15 +163,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stairs
+      name: panicmetro_2
       rect:
         serializedVersion: 2
-        x: 110
-        y: 128
-        width: 18
-        height: 18
+        x: 32
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -184,15 +184,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: asphalt
+      name: panicmetro_3
       rect:
         serializedVersion: 2
-        x: 32
-        y: 94
-        width: 16
-        height: 2
+        x: 110
+        y: 128
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -200,48 +200,6 @@ TextureImporter:
       bones: []
       spriteID: 18d3cfeff542696c0800000000000000
       internalID: -4137079212974785151
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player_small
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 176
-        width: 8
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 777f73e614fe26d90800000000000000
-      internalID: -7105854197736147081
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: olddude_small
-      rect:
-        serializedVersion: 2
-        x: 38
-        y: 176
-        width: 6
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c99185a402febc300800000000000000
-      internalID: 273575124351326620
       vertices: []
       indices: 
       edges: []
