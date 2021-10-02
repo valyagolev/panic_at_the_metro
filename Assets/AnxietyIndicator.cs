@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class AnxietyIndicator : MonoBehaviour
 {
-    private Anxiety anxiety;
     private RectTransform rectTransform;
     private float maxWidth;
     // Start is called before the first frame update
     void Start()
     {
-        anxiety = GameObject.Find("Player").GetComponent<Anxiety>();
         rectTransform = GetComponent<RectTransform>();
         maxWidth = transform.parent.GetComponent<RectTransform>().rect.width;
         Debug.Log(maxWidth);
@@ -20,6 +18,6 @@ public class AnxietyIndicator : MonoBehaviour
     void Update()
     {
         // Debug.Log(anxiety.AsProportion);
-        rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, anxiety.AsProportion * maxWidth);
+        rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, Anxiety.OfPlayer.AsProportion * maxWidth);
     }
 }

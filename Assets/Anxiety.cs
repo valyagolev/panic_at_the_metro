@@ -13,6 +13,21 @@ public class Anxiety : MonoBehaviour
             return value / 100.0f;
         }
     }
+
+    public static Anxiety OfPlayer
+    {
+        get
+        {
+            return GameObject.Find("Player").GetComponent<Anxiety>();
+        }
+    }
+
+    public void Change(int f)
+    {
+        value += f;
+        value = Mathf.Clamp(value, 0, 100);
+    }
+
     // Start is called before the first frame update
     void Start()
     {

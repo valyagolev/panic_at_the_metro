@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SorrySayer : MonoBehaviour
+public class CameraFollowPlayer : MonoBehaviour
 {
-    // public
+    public Transform player;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +14,10 @@ public class SorrySayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        transform.position = new Vector3(
+            player.position.x,
+            transform.position.y,
+            transform.position.z
+        );
     }
 }
