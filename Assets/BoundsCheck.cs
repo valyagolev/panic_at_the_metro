@@ -14,7 +14,7 @@ public class BoundsCheck : MonoBehaviour
     void Update()
     {
         transform.position = new Vector3(
-            Mathf.Clamp(transform.position.x, -8, 8),
+            Mathf.Clamp(transform.position.x, -8, 36),
             Mathf.Clamp(transform.position.y, -8, 8),
             transform.position.z
         );

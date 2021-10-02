@@ -16,7 +16,7 @@ public class Train : MonoBehaviour
     public float moveSpeed = 0.04f;
 
     public float minX = -7.5f;
-    public float maxX = 2.5f;
+    public float maxX = 26.5f;
 
     GameObject openDoors, closedDoors;
 
