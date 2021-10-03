@@ -50,7 +50,8 @@ public class PeopleToucher : MonoBehaviour
 
                 lastCollision = Time.time;
 
-                Anxiety.OfPlayer.Change(10);
+                PeopleSymptom s = GetComponent<Collider>().gameObject.GetComponents<PeopleSymptom>()[0];
+                s.Trigger();
             }
         }
     }
