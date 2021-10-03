@@ -27,13 +27,12 @@ public class PeopleToucher : MonoBehaviour
     void Update()
     {
         // Say sorry?
-        if (Input.GetButton("Sorry"))
+        if (Input.GetButtonDown("Sorry"))
         {
             if (lastSorry < Time.time - sorryLength - sorryRegenerate)
             {
                 lastSorry = Time.time;
                 Anxiety.OfPlayer.Change(1);
-                Debug.Log("sorry");
             }
         }
 
@@ -46,8 +45,8 @@ public class PeopleToucher : MonoBehaviour
 
             if (GetComponent<BoxCollider2D>().OverlapCollider(contactFilter, results) > 0)
             {
-                Debug.Log("Collided");
-                Debug.Log(results[0].gameObject);
+                // Debug.Log("Collided");
+                // Debug.Log(results[0].gameObject);
 
                 lastCollision = Time.time;
 

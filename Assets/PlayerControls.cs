@@ -32,7 +32,7 @@ public class PlayerControls : MonoBehaviour
         }
 
         // fixme
-        if (Mathf.Abs(body.velocity.y) < 0.01f && Input.GetButton("Jump"))
+        if (Mathf.Abs(body.velocity.y) < 0.01f && Input.GetButtonDown("Jump"))
         {
             // isJumping = true;
             // transform.Translate(0, jumpHeight, 0);
