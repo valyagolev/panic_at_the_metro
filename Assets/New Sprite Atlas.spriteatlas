@@ -50,11 +50,11 @@ SpriteAtlas:
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
-  - {fileID: 8186926435456020225, guid: b47811b1f0b9241c6994ca6a567b76c3, type: 3}
   - {fileID: -4137079212974785151, guid: b47811b1f0b9241c6994ca6a567b76c3, type: 3}
+  - {fileID: 8186926435456020225, guid: b47811b1f0b9241c6994ca6a567b76c3, type: 3}
   m_PackedSpriteNamesToIndex:
-  - panicmetro_2
   - panicmetro_3
+  - asphalt
   m_RenderDataMap: {}
   m_Tag: New Sprite Atlas
   m_IsVariant: 0
