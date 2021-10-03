@@ -14,8 +14,6 @@ public class Item : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log(collider.gameObject.GetComponents<ItemSymptom>().Length);
-        Debug.Log(name);
         ItemSymptom s = collider.gameObject.GetComponents<ItemSymptom>().First(s => s.item == name);
 
         if (s)
