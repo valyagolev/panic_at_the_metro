@@ -6170,7 +6170,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e671bc3f3c84cc985712a7c24e4ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  xMargin: 1
+  yMargin: 1
+  xSmooth: 8
+  ySmooth: 8
   player: {fileID: 1630860610}
+  minX: -1
+  maxX: 10
+  minY: 0
+  maxY: 0
 --- !u!1 &1173736392
 GameObject:
   m_ObjectHideFlags: 0
@@ -7317,6 +7325,10 @@ PrefabInstance:
     - target: {fileID: 7931896111779918444, guid: 066c9c774b3f044869a9ee16c03a1a5f, type: 3}
       propertyPath: m_Name
       value: OldDude
+      objectReference: {fileID: 0}
+    - target: {fileID: 7931896111779918444, guid: 066c9c774b3f044869a9ee16c03a1a5f, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7931896111780212300, guid: 066c9c774b3f044869a9ee16c03a1a5f, type: 3}
       propertyPath: m_RootOrder
