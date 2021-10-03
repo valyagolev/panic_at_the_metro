@@ -22,6 +22,6 @@ public abstract class BaseSymptomBehaviour : MonoBehaviour
 
     public void Trigger()
     {
-        GetComponent<Anxiety>().Change((good ? 1 : -1) * strength);
+        GetComponent<Anxiety>().Change((good ? -1 : 1) * strength);
     }
 }

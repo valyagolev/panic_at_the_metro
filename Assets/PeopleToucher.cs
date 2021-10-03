@@ -46,11 +46,11 @@ public class PeopleToucher : MonoBehaviour
             if (GetComponent<BoxCollider2D>().OverlapCollider(contactFilter, results) > 0)
             {
                 // Debug.Log("Collided");
-                // Debug.Log(results[0].gameObject);
+                //Debug.Log(results[0].gameObject);
 
                 lastCollision = Time.time;
 
-                PeopleSymptom s = GetComponent<Collider>().gameObject.GetComponents<PeopleSymptom>()[0];
+                PeopleSymptom s = GetComponent<BoxCollider2D>().gameObject.GetComponents<PeopleSymptom>()[0];
                 s.Trigger();
             }
         }

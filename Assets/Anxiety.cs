@@ -26,6 +26,7 @@ public class Anxiety : MonoBehaviour
 
     public void Change(int f)
     {
+      Debug.Log("Anxiety changed by" + f);
         value += f;
         value = Mathf.Clamp(value, 0, 100);
 
@@ -55,9 +56,9 @@ public class Anxiety : MonoBehaviour
     // 50 times/sec
     void FixedUpdate()
     {
-        if (Random.Range(0, 100) == 0)
+        if (Random.Range(0, 300) == 0)
         {
-            Change(-1);
+            Change(1);
         }
 
         if (Random.Range(0, 20) == 0 && Random.Range(0, 100) < value)
