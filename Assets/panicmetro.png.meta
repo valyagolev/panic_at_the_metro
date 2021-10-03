@@ -35,6 +35,24 @@ TextureImporter:
   - first:
       213: 2239883835037104886
     second: panicmetro_10
+  - first:
+      213: 1308100541960957603
+    second: redpixel
+  - first:
+      213: -1519520757718044952
+    second: anxiety_indicator
+  - first:
+      213: 7739171602408124885
+    second: A
+  - first:
+      213: 4382476228971362456
+    second: cigs
+  - first:
+      213: 2639763281805943065
+    second: fries
+  - first:
+      213: 2751410813396573083
+    second: green
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -223,9 +241,9 @@ TextureImporter:
       name: panicmetro_4
       rect:
         serializedVersion: 2
-        x: 110
+        x: 108
         y: 173
-        width: 20
+        width: 23
         height: 6
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -362,6 +380,132 @@ TextureImporter:
       bones: []
       spriteID: 6fab6850b7aa51f10800000000000000
       internalID: 2239883835037104886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redpixel
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 175
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ae2416238e472210800000000000000
+      internalID: 1308100541960957603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anxiety_indicator
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 173
+        width: 1
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ee226febe399eae0800000000000000
+      internalID: -1519520757718044952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 172
+        width: 3
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d1b359819f076b60800000000000000
+      internalID: 7739171602408124885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cigs
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8987e6039eea1dc30800000000000000
+      internalID: 4382476228971362456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fries
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 911a92ff7b252a420800000000000000
+      internalID: 2639763281805943065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 159
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9bdba3ae89fe2620800000000000000
+      internalID: 2751410813396573083
       vertices: []
       indices: 
       edges: []

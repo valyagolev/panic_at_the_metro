@@ -28,15 +28,17 @@ public class Anxiety : MonoBehaviour
         value = Mathf.Clamp(value, 0, 100);
     }
 
-    // Start is called before the first frame update
     void Start()
     {
 
     }
 
-    // Update is called once per frame
-    void Update()
+    // 50 times/sec
+    void FixedUpdate()
     {
-
+        if (Random.Range(0, 100) == 0)
+        {
+            Change(-1);
+        }
     }
 }
