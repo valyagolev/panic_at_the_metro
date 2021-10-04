@@ -26,13 +26,18 @@ public class Anxiety : MonoBehaviour
 
     public void Change(int f)
     {
-      Debug.Log("Anxiety changed by" + f);
+        Debug.Log("Anxiety changed by" + f);
         value += f;
         value = Mathf.Clamp(value, 0, 100);
 
         if (f != 0 && animator)
         {
             animator.TriggerParticles(Mathf.Abs(f) >= 10, f < 0);
+        }
+
+        if (value >= 90)
+        {
+            Log.Write("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
         }
     }
 
@@ -65,11 +70,12 @@ public class Anxiety : MonoBehaviour
         {
             GetComponent<Screamer>().Spawn();
         }
-        if (Random.Range(0, 50000/(value+1)) == 0){
-          BaseSymptomBehaviour[] symptoms = GetComponent<Symptoms>().symptoms;
-          int symptom = Random.Range(0,symptoms.Length);
-          symptoms[symptom].good = !symptoms[symptom].good;
-          symptoms[symptom].strength = Random.Range(1, 10);
+        if (Random.Range(0, 50000 / (value + 1)) == 0)
+        {
+            BaseSymptomBehaviour[] symptoms = GetComponent<Symptoms>().symptoms;
+            int symptom = Random.Range(0, symptoms.Length);
+            symptoms[symptom].good = !symptoms[symptom].good;
+            symptoms[symptom].strength = Random.Range(1, 10);
         }
     }
 }

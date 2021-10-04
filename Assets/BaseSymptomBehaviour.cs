@@ -23,7 +23,26 @@ public abstract class BaseSymptomBehaviour : MonoBehaviour
 
     public void Trigger()
     {
-        known = true;
+        if (!known)
+        {
+            if (Random.Range(0, 5) == 0)
+            {
+                known = true;
+                Log.Write("You realise that " + Description());
+            }
+            else
+            {
+                if (good)
+                {
+                    Log.Write("You feel calmer for some reason");
+                }
+                else
+                {
+                    Log.Write("You feel worried for some reason");
+                }
+            }
+        }
+
         GetComponent<Anxiety>().Change((good ? -1 : 1) * strength);
     }
 }
