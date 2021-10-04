@@ -27,7 +27,7 @@ public class ItemSpawner : MonoBehaviour
             {
                 GameObject person = Instantiate(personPrefab, s, Quaternion.identity);
                 person.GetComponent<MobAction>().speedModifier =
-                    (Random.Range(0, 2) - 1) * Random.Range(0.7f, 1.3f);
+                    (Random.Range(0, 2) == 0 ? -1 : 1) * Random.Range(0.7f, 1.3f);
                 // person.GetComponent<MobAction>().direction = (MobAction.Direction)Random.Range(0, 2);
             }
         }
@@ -38,7 +38,7 @@ public class ItemSpawner : MonoBehaviour
             {
                 GameObject person = Instantiate(personPrefab, s, Quaternion.identity);
                 person.GetComponent<MobAction>().speedModifier =
-                    (Random.Range(0, 2) - 1) * Random.Range(0.7f, 1.3f);
+                    (Random.Range(0, 2) == 0 ? -1 : 1) * Random.Range(0.7f, 1.3f);
                 // person.GetComponent<MobAction>().direction = (MobAction.Direction)Random.Range(0, 2);
             }
         }

@@ -20,10 +20,10 @@ public class MobAction : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        m_Character.Move(speedModifier * 0.1f, false, Random.Range(0, atTrainDoor ? 50 : 400) == 0);
-        if (Random.Range(0, 1000) == 0) speedModifier = -speedModifier;
+        m_Character.Move(speedModifier * 0.1f, false, Random.Range(0, atTrainDoor ? 60 : 500) == 0);
+        if (Random.Range(0, 1200) == 0) speedModifier = -speedModifier;
     }
 
     void OnTriggerEnter2D(Collider2D collider)
@@ -33,7 +33,7 @@ public class MobAction : MonoBehaviour
 
         if (collider.transform.parent?.name == "OpenDoors")
         {
-            Debug.Log("Doors enter");
+            // Debug.Log("Doors enter");
             atTrainDoor = true;
         }
     }
@@ -45,7 +45,7 @@ public class MobAction : MonoBehaviour
 
         if (collider.transform.parent?.name == "OpenDoors")
         {
-            Debug.Log("Doors exit");
+            // Debug.Log("Doors exit");
             atTrainDoor = false;
         }
     }
