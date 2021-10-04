@@ -10,6 +10,7 @@ public class FreeSpaces : MonoBehaviour
     [HideInInspector]
     public List<Vector3> freeSpaces = new List<Vector3>();
 
+
     void Start()
     {
         Tilemap tilemap = GetComponent<Tilemap>();
@@ -26,6 +27,8 @@ public class FreeSpaces : MonoBehaviour
                 Vector3 place = tilemap.CellToWorld(localPlace) + offsetOnTop;
                 allSpaces.Add(place);
             }
+
+
         }
 
         freeSpaces = new List<Vector3>(allSpaces);

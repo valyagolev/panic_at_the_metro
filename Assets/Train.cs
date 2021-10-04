@@ -28,7 +28,7 @@ public class Train : MonoBehaviour
 
     GameObject openDoors, closedDoors;
 
-    float moveDirection;
+    public int moveDirection = 1;
 
     float lastStateChange;
 
