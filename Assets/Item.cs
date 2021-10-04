@@ -5,21 +5,13 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+    public string itemName;
 
     // Update is called once per frame
-    void Update()
+    void Start()
     {
-
+        itemName = GetComponent<SpriteRenderer>().sprite.name;
     }
 
-    void OnTriggerEnter2D(Collider2D collider)
-    {
-        var s = collider.gameObject.GetComponents<ItemSymptom>().FirstOrDefault(s => s.item == name);
 
-        if (s)
-        {
-            s.Trigger();
-            Destroy(gameObject);
-        }
-    }
 }
