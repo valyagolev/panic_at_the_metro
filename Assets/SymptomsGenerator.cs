@@ -29,6 +29,16 @@ public class SymptomsGenerator : MonoBehaviour
         ps.strength = Random.Range(1, 10);
         symptoms.Add(ps);
 
+        TonnelSymptom tons = gameObject.AddComponent<TonnelSymptom>();
+        tons.good = Random.Range(0, 3) == 0;
+        tons.strength = Random.Range(1, 30);
+        symptoms.Add(ps);
+
+        PolitenessSymptom pps = gameObject.AddComponent<PolitenessSymptom>();
+        pps.good = Random.Range(0, 2) == 0;
+        pps.strength = Random.Range(1, 15);
+        symptoms.Add(pps);
+
         GetComponent<Symptoms>().symptoms = Fisher_Yates_CardDeck_Shuffle(symptoms).ToArray();
     }
 

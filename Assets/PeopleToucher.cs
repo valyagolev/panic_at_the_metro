@@ -38,21 +38,26 @@ public class PeopleToucher : MonoBehaviour
 
         sorry.gameObject.SetActive(IsSorry());
 
-        if (!IsSorry() && lastCollision < Time.time - collisionRegenerate)
-        {
+        if (lastCollision < Time.time - collisionRegenerate) {
+        
             // Check Collisions with mobs
             Collider2D[] results = new Collider2D[1];
 
             if (GetComponent<BoxCollider2D>().OverlapCollider(contactFilter, results) > 0)
             {
+                lastCollision = Time.time;
                 // Debug.Log("Collided");
                 //Debug.Log(results[0].gameObject);
 
-                lastCollision = Time.time;
-
-                PeopleSymptom s = GetComponent<BoxCollider2D>().gameObject.GetComponents<PeopleSymptom>()[0];
-                s.Trigger();
-            }
+                if (!IsSorry())
+                {
+                    PeopleSymptom s = GetComponent<PeopleSymptom>();
+                    s.Trigger();
+                }
+                } else {
+                    PolitenessSymptom s = GetComponent<PolitenessSymptom>();
+                    s.TriggerDebounced(3000);
+                }
         }
     }
 

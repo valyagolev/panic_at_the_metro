@@ -21,7 +21,7 @@ public class ItemSymptom : BaseSymptomBehaviour
     void OnTriggerEnter2D(Collider2D collider)
     {
         var i = collider.GetComponent<Item>();
-        if (i.itemName == item)
+        if (i?.itemName == item)
         {
             Trigger();
             Destroy(collider.gameObject);
