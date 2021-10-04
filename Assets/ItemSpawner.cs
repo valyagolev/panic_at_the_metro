@@ -24,8 +24,9 @@ public class ItemSpawner : MonoBehaviour
             }
             else if (Random.Range(0, 10) == 0)
             {
-                GameObject item = Instantiate(personPrefab, s, Quaternion.identity);
-                // item.GetComponent<SpriteRenderer>().sprite = items[Random.Range(0, items.Length)];
+                GameObject person = Instantiate(personPrefab, s, Quaternion.identity);
+                person.GetComponent<MobAction>().speedModifier = Random.Range(0.7f, 1.3f);
+                person.GetComponent<MobAction>().direction = (MobAction.Direction)Random.Range(0, 2);
             }
         }
     }

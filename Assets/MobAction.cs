@@ -7,7 +7,10 @@ using UnityStandardAssets._2D;
 public class MobAction : MonoBehaviour
 {
     private PlatformerCharacter2D m_Character;
-    // private bool m_Jump;
+
+    public enum Direction { Up, Down };
+    public Direction direction;
+    public float speedModifier = 1.0f;
 
     private void Awake()
     {
@@ -17,6 +20,6 @@ public class MobAction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        m_Character.Move(0.1f, false, false);
+        m_Character.Move(speedModifier * 0.1f, false, false);
     }
 }
