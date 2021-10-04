@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Symptoms : MonoBehaviour
 {
     public Text symptomText;
-    public Color goodColor, badColor;
+    public Color goodColor, badColor, unknownColor;
 
     public BaseSymptomBehaviour[] symptoms;
 
@@ -56,8 +56,17 @@ public class Symptoms : MonoBehaviour
 
         for (var i = 0; i < symptoms.Length; i++)
         {
-            symptomTexts[i].text = symptoms[i].Description();
-            symptomTexts[i].color = symptoms[i].good ? goodColor : badColor;
+            if (!symptoms[i].known)
+            {
+                symptomTexts[i].text = "???";
+                symptomTexts[i].color = unknownColor;
+            }
+            else
+            {
+                symptomTexts[i].text = symptoms[i].Description();
+                symptomTexts[i].color = symptoms[i].good ? goodColor : badColor;
+            }
+
         }
     }
 }

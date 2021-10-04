@@ -6,6 +6,7 @@ public abstract class BaseSymptomBehaviour : MonoBehaviour
 {
     abstract public string Description();
     public bool good;
+    public bool known;
     public int strength = 10;
 
     // Start is called before the first frame update
@@ -22,6 +23,7 @@ public abstract class BaseSymptomBehaviour : MonoBehaviour
 
     public void Trigger()
     {
+        known = true;
         GetComponent<Anxiety>().Change((good ? -1 : 1) * strength);
     }
 }
