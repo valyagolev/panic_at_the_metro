@@ -247,6 +247,7 @@ GameObject:
   - component: {fileID: 9527344}
   - component: {fileID: 9527346}
   - component: {fileID: 9527345}
+  - component: {fileID: 9527347}
   m_Layer: 8
   m_Name: Train
   m_TagString: Untagged
@@ -262,7 +263,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9527339}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5, y: -2.59, z: -0.001}
+  m_LocalPosition: {x: -0.02, y: -2.59, z: -0.001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2069190306}
@@ -287,14 +288,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d482d0c19132340dda9f0e9ccdcadc5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
-  currentStop: 0
+  state: 1
+  currentStop: 1
   openDoorsFor: 3
   moveSpeed: 0.04
   minX: -7.5
   maxX: 2.5
   stops: {fileID: 1440848653}
   stopDoor: {fileID: 484818546}
+  moveDirection: 1
 --- !u!68 &9527342
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -405,6 +407,19 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &9527347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9527339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c901ec17ae21b434bafbd11494e27563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allSpaces: []
 --- !u!1 &21657605
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,7 +435,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &21657606
 Transform:
   m_ObjectHideFlags: 0
@@ -521,6 +536,10 @@ PrefabInstance:
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 87a2357765801c34292d6718d8b4d770, type: 3}
+      propertyPath: m_JumpForce
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4520421942877416009, guid: 87a2357765801c34292d6718d8b4d770, type: 3}
       propertyPath: value
@@ -935,6 +954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spaces: {fileID: 716546180}
+  trainSpaces: {fileID: 9527347}
   itemPrefab: {fileID: 621308325671145068, guid: c2ff542fb1a2045b7a2298053dbd3fa6, type: 3}
   personPrefab: {fileID: 7931896111779918444, guid: 066c9c774b3f044869a9ee16c03a1a5f, type: 3}
 --- !u!1 &484818545
