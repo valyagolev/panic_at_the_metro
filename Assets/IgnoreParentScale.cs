@@ -6,7 +6,7 @@ public class IgnoreParentScale : MonoBehaviour
 {
     Vector3 originalParentScale, originalScale;
 
-    void Start()
+    void Awake()
     {
         originalParentScale = transform.parent.localScale;
         originalScale = transform.localScale;

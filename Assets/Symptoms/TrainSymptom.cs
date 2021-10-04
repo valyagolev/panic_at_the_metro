@@ -20,7 +20,7 @@ public class TrainSymptom : BaseSymptomBehaviour
     {
         if (collider.name == "TrainFloor")
         {
-            TriggerDebounced(1000);
+            TriggerDebounced(1);
         }
     }
 }

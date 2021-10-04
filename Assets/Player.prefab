@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 5800000}
   - component: {fileID: 5000000}
   - component: {fileID: 11400002}
-  - component: {fileID: 11400000}
+  - component: {fileID: 5750809519057353279}
   - component: {fileID: 6100000}
   - component: {fileID: 4520421942877416009}
   - component: {fileID: 5284026731622830330}
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &11400000
+--- !u!114 &5750809519057353279
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -213,7 +213,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3d7b34a3bb2d4e4b926e7e729d3d410, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a29d61cf45c54f24a74e9273da91585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &6100000

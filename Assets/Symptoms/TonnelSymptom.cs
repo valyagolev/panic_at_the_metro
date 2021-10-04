@@ -12,15 +12,16 @@ public class TonnelSymptom : BaseSymptomBehaviour
         }
         else
         {
-            return "tonnels as scary af";
+            return "tonnels are scary af";
         }
     }
 
     void Update()
     {
-        if (transform.position.y < 0.2)
+        if (transform.position.y < -2.5)
         {
-            TriggerDebounced(2000);
+            Debug.Log("trigger tonnel");
+            TriggerDebounced(2);
         }
     }
 }

@@ -32,7 +32,7 @@ public class SymptomsGenerator : MonoBehaviour
         TonnelSymptom tons = gameObject.AddComponent<TonnelSymptom>();
         tons.good = Random.Range(0, 3) == 0;
         tons.strength = Random.Range(1, 30);
-        symptoms.Add(ps);
+        symptoms.Add(tons);
 
         PolitenessSymptom pps = gameObject.AddComponent<PolitenessSymptom>();
         pps.good = Random.Range(0, 2) == 0;
