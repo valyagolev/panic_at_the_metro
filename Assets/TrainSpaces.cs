@@ -22,6 +22,7 @@ public class TrainSpaces : MonoBehaviour
                 }
                 continue;
             }
+            Debug.Log(child.position);
             allSpaces.Add(child.position);
         }
     }

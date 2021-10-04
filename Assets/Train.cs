@@ -39,7 +39,7 @@ public class Train : MonoBehaviour
         closedDoors = transform.Find("ClosedDoors").gameObject;
 
         Vector3 stopOffset = stopDoor.position - transform.position;
-        path = stops.GetComponentsInChildren<Transform>().Select(t => t.position - stopOffset).ToArray();
+        path = stops.transform.Cast<Transform>().Select(t => t.position - stopOffset).ToArray();
 
     }
 

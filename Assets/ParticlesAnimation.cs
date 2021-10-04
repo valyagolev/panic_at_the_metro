@@ -22,17 +22,17 @@ public class ParticlesAnimation : MonoBehaviour
                 Destroy(tr.gameObject);
             }
             Destroy(this);
+
+            return;
         }
-        else
+
+        float dist = Time.deltaTime * animationSpeed;
+        foreach (Transform tr in particles)
         {
-            float dist = Time.deltaTime * animationSpeed;
-            foreach (Transform tr in particles)
+            foreach (Transform particle in tr)
             {
-                foreach (Transform particle in tr.GetComponentsInChildren<Transform>())
-                {
-                    Vector3 direction = particle.localPosition;
-                    particle.Translate(direction * dist);
-                }
+                Vector3 direction = (particle.position - transform.position).normalized;
+                particle.Translate(direction * dist);
             }
         }
     }
