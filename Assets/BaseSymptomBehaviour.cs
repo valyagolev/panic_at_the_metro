@@ -9,6 +9,8 @@ public abstract class BaseSymptomBehaviour : MonoBehaviour
     public bool known;
     public int strength = 10;
 
+    float lastTriggerTime = -10;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,8 @@ public abstract class BaseSymptomBehaviour : MonoBehaviour
 
     public void Trigger()
     {
+        lastTriggerTime = Time.time;
+
         if (!known)
         {
             if (Random.Range(0, 5) == 0)
@@ -44,5 +48,13 @@ public abstract class BaseSymptomBehaviour : MonoBehaviour
         }
 
         GetComponent<Anxiety>().Change((good ? -1 : 1) * strength);
+    }
+
+    public void TriggerDebounced(float dt)
+    {
+        if (Time.time - lastTriggerTime > dt)
+        {
+            Trigger();
+        }
     }
 }

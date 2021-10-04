@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PeopleSymptom : BaseSymptomBehaviour
 {
-
-
     public override string Description()
     {
         if (good)
