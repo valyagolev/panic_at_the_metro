@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Log : MonoBehaviour
 {
-    public string current = "You find yourself deep underground, mood unbalanced, purpose uncertain.";
+    public string current = "You find yourself deep underground, mood unbalanced, purpose uncertain";
 
     Text text;
     // Start is called before the first frame update
