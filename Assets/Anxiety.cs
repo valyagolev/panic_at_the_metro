@@ -26,7 +26,7 @@ public class Anxiety : MonoBehaviour
 
     public void Change(int f)
     {
-        Debug.Log("Anxiety changed by" + f);
+        // Debug.Log("Anxiety changed by" + f);
         value += f;
         value = Mathf.Clamp(value, 0, 100);
 

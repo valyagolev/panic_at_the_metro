@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,12 +12,19 @@ public class Train : MonoBehaviour
     };
 
     public State state = State.DoorsOpen;
+    public int currentStop = 0;
 
     public float openDoorsFor = 3;
     public float moveSpeed = 0.04f;
 
     public float minX = -7.5f;
     public float maxX = 26.5f;
+
+    public GameObject stops;
+    public Transform stopDoor;
+
+    Vector3[] path;
+    // Vector3 stopOffset;
 
     GameObject openDoors, closedDoors;
 
@@ -29,6 +37,10 @@ public class Train : MonoBehaviour
     {
         openDoors = transform.Find("OpenDoors").gameObject;
         closedDoors = transform.Find("ClosedDoors").gameObject;
+
+        Vector3 stopOffset = stopDoor.position - transform.position;
+        path = stops.GetComponentsInChildren<Transform>().Select(t => t.position - stopOffset).ToArray();
+
     }
 
     void FixedUpdate()
@@ -42,6 +54,25 @@ public class Train : MonoBehaviour
                 if (lastStateChange < Time.time - openDoorsFor)
                 {
                     state = State.Moving;
+                    if (moveDirection > 0)
+                    {
+                        currentStop++;
+                        if (currentStop >= path.Length)
+                        {
+                            currentStop = path.Length - 2;
+                            moveDirection = -1;
+                        }
+                    }
+                    else
+                    {
+                        currentStop--;
+                        if (currentStop < 0)
+                        {
+                            currentStop = 1;
+                            moveDirection = 1;
+                        }
+                    }
+
                 }
                 break;
 
@@ -52,19 +83,17 @@ public class Train : MonoBehaviour
                 transform.Translate(moveDirection * moveSpeed, 0, 0);
                 if (moveDirection == -1)
                 {
-                    if (transform.position.x <= minX)
+                    if (transform.position.x <= path[currentStop].x)
                     {
                         state = State.DoorsOpen;
-                        moveDirection = 1;
                         lastStateChange = Time.time;
                     }
                 }
                 else
                 {
-                    if (transform.position.x >= maxX)
+                    if (transform.position.x >= path[currentStop].x)
                     {
                         state = State.DoorsOpen;
-                        moveDirection = -1;
                         lastStateChange = Time.time;
                     }
                 }
